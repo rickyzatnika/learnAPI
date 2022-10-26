@@ -3,13 +3,16 @@ import { use } from "react";
 const options = {
   method: "GET",
   headers: {
-    "X-RapidAPI-Key": process.env.RAPID_KEY,
-    "X-RapidAPI-Host": process.env.RAPID_HOST,
+    "X-RapidAPI-Key": process.env.NEXT_PUBLIC_RAPID_KEY,
+    "X-RapidAPI-Host": process.env.NEXT_PUBLIC_RAPID_HOST,
   },
 };
 
 async function getPost() {
-  const posts = await fetch(`${process.env.RAPID_API}/news`, options);
+  const posts = await fetch(
+    `${process.env.NEXT_PUBLIC_RAPID_API}/news`,
+    options
+  );
 
   return posts.json();
 }
