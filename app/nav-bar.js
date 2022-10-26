@@ -11,6 +11,9 @@ export default function Navbar() {
         <Link href="/posts" style={{ padding: "10px" }}>
           Post
         </Link>
+        <Link href="/about" style={{ padding: "10px" }}>
+          About
+        </Link>
       </nav>
     </>
   );
